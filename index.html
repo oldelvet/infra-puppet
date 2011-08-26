@@ -8,9 +8,8 @@
   <style type="text/css">
     body {
       margin-top: 1.0em;
-      background-color: #202c9a;
       font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
+      color: #000;
     }
     #container {
       margin: 0 auto;
@@ -18,10 +17,9 @@
     }
     h1 { font-size: 3.8em; color: #dfd365; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
-    h1 a { text-decoration: none }
+    h1 a { text-decoration: none; color: #dfd365; }
     h2 { font-size: 1.5em; color: #dfd365; }
     h3 { text-align: center; color: #dfd365; }
-    a { color: #dfd365; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
     pre { background: #000; color: #fff; padding: 15px;}
@@ -49,8 +47,34 @@
       Puppet manifests for managing the Jenkins project infrastructure
     </div>
 
+    <h2>Overview</h2>
+    <p>
+    The "infra-puppet" project is an effort to maintain an open source
+    infrastructure for the <a href="http://jenkins-ci.org/">Jenkins
+        project</a>. This means that everything possible should be entered into
+    <a href="http://www.puppetlabs.com/puppet/introduction/">Puppet</a>
+    manifests such that the Jenkins developer and infrastructure teams can have
+    a clear idea of what changes are being made/applied, where they're being
+    applied, and <em>why</em>.
+    </p>
+
+    <h2>Getting Starded</h2>
+    <p>
+        We use <a href="http://vagrantup.com">Vagrant</a> in order to test changes locally. Installing Vagrant is very simple:
+        <pre>$ sudo gem install vagrant</pre>
+
+        Then you can use it to bring up a virtual machine with:
+        <pre>~/infra-puppet $ vagrant up</pre>
+
+        While working on changes, you can use the following command to re-apply recently made changes, instead of destroying the virtual machine and starting from scratch:
+        <pre>~/infra-puppet $ vagrant provision</pre>
+    </p>
+
     <h2>Authors</h2>
-<p>R. Tyler Croy (tyler@monkeypox.org)<br/><br/>      </p>
+    <p>
+    R. Tyler Croy (tyler@monkeypox.org)
+    <br/><br/>
+    </p>
 
 
     <h2>Download</h2>
